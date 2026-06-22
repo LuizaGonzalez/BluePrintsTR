@@ -77,6 +77,7 @@ public class PostgresBlueprintPersistence implements BlueprintPersistence {
     }
 
     @Override
+    @Transactional
     public void deleteBlueprint(String author, String name) throws BlueprintNotFoundException {
         if (!repository.existsByAuthorAndName(author, name)) {
             throw new BlueprintNotFoundException("Blueprint not found: %s/%s".formatted(author, name));

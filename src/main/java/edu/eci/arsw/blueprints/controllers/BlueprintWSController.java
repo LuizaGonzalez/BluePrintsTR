@@ -6,7 +6,9 @@ import edu.eci.arsw.blueprints.services.BlueprintsServices;
 import org.springframework.messaging.handler.annotation.MessageMapping;
 import org.springframework.messaging.handler.annotation.Payload;
 import org.springframework.messaging.simp.SimpMessagingTemplate;
+import org.springframework.stereotype.Controller;
 
+@Controller
 public class BlueprintWSController {
     private final SimpMessagingTemplate messaging;
     private final BlueprintsServices services;
